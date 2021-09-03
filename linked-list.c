@@ -15,8 +15,8 @@ int main()
     for (int index = 0; index < 5; index++)
     {
         list[index] = (LinkedList*)malloc(sizeof(LinkedList));
-
-        // printf("Tamanho do indice %d: %d", index, sizeof(list[index]));
+        list[index]->Previous = NULL;
+        list[index]->Next = NULL;
 
         int previousIndex = index - 1;
 
