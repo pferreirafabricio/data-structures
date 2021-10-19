@@ -27,7 +27,8 @@ void pop()
     if (verify_if_stack_is_empty() == 0)
         return;
 
-    if (top->previous == NULL) {
+    if (top->previous == NULL)
+    {
         free(top);
         top = NULL;
         return;
@@ -64,7 +65,13 @@ void push(char operator)
 int is_arithmetic_operator(char character)
 {
     if (
-        character != '+' && character != '-' && character != '/' && character != '*')
+        character != '+'
+        && character != '-'
+        && character != '/'
+        && character != '*'
+        && character != '^'
+        && character != '%'
+    )
         return 0;
 
     return 1;
